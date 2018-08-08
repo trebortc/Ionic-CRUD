@@ -1,8 +1,8 @@
 export const FIREBASE_CREDENTIALS = {
-    apiKey: "your-credentials",
-    authDomain: "your-credentials",
-    databaseURL: "your-credentials",
-    projectId: "your-credentials",
-    storageBucket: "your-credentials",
-    messagingSenderId: "your-credentials"
+    apiKey: "AIzaSyBPttgY9JCb3i9P6NSLqzcUQkChKuDX8M0",
+    authDomain: "proyecto-6a217.firebaseapp.com",
+    databaseURL: "https://proyecto-6a217.firebaseio.com",
+    projectId: "proyecto-6a217",
+    storageBucket: "proyecto-6a217.appspot.com",
+    messagingSenderId: "65725840833"
 };

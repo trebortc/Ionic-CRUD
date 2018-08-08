@@ -35,8 +35,10 @@ export class AddShoppingPage {
       Push this to our Firebase database under the 'shopping-list' node.
     */
     this.shoppingItemRef$.push({
-      itemName: this.shoppingItem.itemName,
-      itemNumber: Number(this.shoppingItem.itemNumber)
+      itemNombre: this.shoppingItem.itemNombre,
+      itemCantidad: Number(this.shoppingItem.itemCantidad),
+      itemMarca: this.shoppingItem.itemMarca,
+      itemObservaciones: this.shoppingItem.itemObservaciones 
     });
 
     // Reset our ShoppingItem

@@ -1,22 +1,32 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Add Shopping</ion-title>
+    <ion-title>Agregar Producto</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="fondo">
 
   <ion-item>
-    <ion-label floating>Item Name</ion-label>
-    <ion-input type="text" [(ngModel)]="shoppingItem.itemName"></ion-input>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemNombre"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Number</ion-label>
-    <ion-input type="number" [(ngModel)]="shoppingItem.itemNumber"></ion-input>
+    <ion-label floating>Cantidad</ion-label>
+    <ion-input type="number" [(ngModel)]="shoppingItem.itemCantidad"></ion-input>
   </ion-item>
 
-  <button ion-button block (click)="addShoppingItem(shoppingItem)">Add Item</button>
+  <ion-item>
+    <ion-label floating>Marca</ion-label>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemMarca"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Observaciones:</ion-label>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemObservaciones"></ion-input>
+  </ion-item>
+
+  <button ion-button block (click)="addShoppingItem(shoppingItem)">Agregar Producto</button>
 </ion-content>

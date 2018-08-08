@@ -2,7 +2,7 @@
 <ion-header>
  
   <ion-navbar color="primary">
-    <ion-title>Shopping List</ion-title>
+    <ion-title>Lista Productos</ion-title>
     <ion-buttons end> 
       <button ion-button icon-only 
       (click)="navigateToAddShoppingPage()">
@@ -13,15 +13,19 @@
 
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content padding class="fondo">
   <ion-list>
-    <!-- Repeat the ion-item for as many items that we have inside of our shopping list. -->
     <ion-item *ngFor="let item of shoppingListRef$ | async" (click)="selectShoppingItem(item)">
-      <h2>Item Name: {{item.itemName}}</h2>
-      <h3>Amount: {{item.itemNumber}}</h3>
+      <ion-list-header>
+        <ion-avatar item-start>
+          <img src="./assets/images/{{ item.itemNombre }}.jpg">
+        </ion-avatar>
+        <ion-title>{{ item.itemNombre }} </ion-title>
+      </ion-list-header>
+      <ion-icon name="cart" item-start></ion-icon>
+      <ion-title> Cantidad: {{ item.itemCantidad }} </ion-title>
+      <ion-title> Descripción: {{ item.itemMarca }} </ion-title>
+      <ion-title> Marca: {{ item.itemObservaciones }}</ion-title>
     </ion-item>
   </ion-list>
-
 </ion-content>

@@ -11,20 +11,23 @@ import { MyApp } from './app.component';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping';
 import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item';
+import { RootPage } from '../pages/root/root';
+
+import { SplashPage } from '../pages/splash/splash';
 
 @NgModule({
   declarations: [
     MyApp,
     ShoppingListPage,
     AddShoppingPage,
-    EditShoppingItemPage
+    EditShoppingItemPage,
+    RootPage,
+    SplashPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    // Initialise AngularFire with credientials from the dashboard
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
-    // Import the AngularFireDatabaseModule to use database interactions
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
@@ -32,7 +35,9 @@ import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-
     MyApp,
     ShoppingListPage,
     AddShoppingPage,
-    EditShoppingItemPage
+    EditShoppingItemPage,
+    RootPage,
+    SplashPage
   ],
   providers: [
     StatusBar,
